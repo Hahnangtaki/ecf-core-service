@@ -1,0 +1,180 @@
+{
+    "name": "Campaign",
+    "fields": [
+        {
+            "fieldName": "campaignCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "campaignName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "campaignDesc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
+            "fieldName": "investmentType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "offerDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "deadlineDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fundTarget",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fundRaised",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fundPaid",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "qtyTarget",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "qtyRaised",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "estRoiMin",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "estRoiMax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "prospectusFile",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "campaignLogo1",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "campaignLogo2",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "campaignLogo3",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currencyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModificationSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastModificationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModificationUserId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignCategory",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "campaignCategory"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignInvestor",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "campaignInvestor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignPayment",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "campaignPayment"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignTransaction",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "campaignTransaction"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "companyBank",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "companyBank",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "accountMember",
+            "otherEntityRelationshipName": "campaign",
+            "relationshipName": "accountMember",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191016103858",
+    "entityTableName": "campaign",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "ecfcoresvc",
+    "applications": "*",
+    "microserviceName": "ecfcoresvc"
+}

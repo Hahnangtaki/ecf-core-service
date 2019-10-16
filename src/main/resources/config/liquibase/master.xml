@@ -14,6 +14,26 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103852_added_entity_AccountAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103853_added_entity_AccountMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103854_added_entity_CampaignInvestor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103855_added_entity_AccountAuthorize.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103856_added_entity_AccountIndividu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103857_added_entity_AccountInstitution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103858_added_entity_Campaign.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103859_added_entity_CampaignTransaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103900_added_entity_CampaignPayment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103901_added_entity_CampaignCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103902_added_entity_CompanyBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103903_added_entity_AccountBank.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191016103852_added_entity_constraints_AccountAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103853_added_entity_constraints_AccountMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103854_added_entity_constraints_CampaignInvestor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103855_added_entity_constraints_AccountAuthorize.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103858_added_entity_constraints_Campaign.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103859_added_entity_constraints_CampaignTransaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103900_added_entity_constraints_CampaignPayment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016103901_added_entity_constraints_CampaignCategory.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

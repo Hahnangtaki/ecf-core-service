@@ -1,0 +1,76 @@
+{
+    "name": "CampaignInvestor",
+    "fields": [
+        {
+            "fieldName": "qtyOnHand",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "qtyDeposit",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "qtyWithdraw",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "castValue",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "profitLoss",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "createSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModificationSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastModificationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModificationUserId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "campaign",
+            "otherEntityRelationshipName": "campaignInvestor",
+            "relationshipName": "campaign",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "accountMember",
+            "otherEntityRelationshipName": "campaignInvestor",
+            "relationshipName": "accountMember",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191016103854",
+    "entityTableName": "campaign_investor",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "ecfcoresvc",
+    "applications": "*",
+    "microserviceName": "ecfcoresvc"
+}
