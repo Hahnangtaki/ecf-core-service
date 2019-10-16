@@ -1,0 +1,140 @@
+{
+    "name": "AccountMember",
+    "fields": [
+        {
+            "fieldName": "accountCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "accountName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "accountType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1
+        },
+        {
+            "fieldName": "accountAngel",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "kseiClientCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4
+        },
+        {
+            "fieldName": "kseiSubrek",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 15
+        },
+        {
+            "fieldName": "createSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModificationSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastModificationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModificationUserId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountInstitution",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "accountInstitution",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountIndividu",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "accountIndividu",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountBank",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "accountBank",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignTransaction",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "campaignTransaction"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaign",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "campaign"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignInvestor",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "campaignInvestor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "accountAddress",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "accountAddress"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "accountAuthorize",
+            "otherEntityRelationshipName": "accountMember",
+            "relationshipName": "accountAuthorize"
+        }
+    ],
+    "changelogDate": "20191016103853",
+    "entityTableName": "account_member",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "ecfcoresvc",
+    "applications": "*",
+    "microserviceName": "ecfcoresvc"
+}

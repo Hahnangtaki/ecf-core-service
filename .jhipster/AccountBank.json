@@ -1,0 +1,95 @@
+{
+    "name": "AccountBank",
+    "fields": [
+        {
+            "fieldName": "bankAccountNo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 60
+        },
+        {
+            "fieldName": "bankAccountName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "bankBranch",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1
+        },
+        {
+            "fieldName": "currencyId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "bankId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModificationSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastModificationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModificationUserId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campaignPayment",
+            "otherEntityRelationshipName": "accountBank",
+            "relationshipName": "campaignPayment"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountMember",
+            "otherEntityRelationshipName": "accountBank",
+            "relationshipName": "accountMember",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191016103903",
+    "entityTableName": "account_bank",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "ecfcoresvc",
+    "applications": "*",
+    "microserviceName": "ecfcoresvc"
+}

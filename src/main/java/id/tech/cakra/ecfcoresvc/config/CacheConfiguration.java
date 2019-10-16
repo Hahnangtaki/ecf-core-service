@@ -40,6 +40,30 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountAddress.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName() + ".campaignTransactions");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName() + ".campaigns");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName() + ".campaignInvestors");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName() + ".accountAddresses");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountMember.class.getName() + ".accountAuthorizes");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CampaignInvestor.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountAuthorize.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountIndividu.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountInstitution.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.Campaign.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.Campaign.class.getName() + ".campaignCategories");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.Campaign.class.getName() + ".campaignInvestors");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.Campaign.class.getName() + ".campaignPayments");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.Campaign.class.getName() + ".campaignTransactions");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CampaignTransaction.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CampaignPayment.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CampaignCategory.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CompanyBank.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CompanyBank.class.getName() + ".campaigns");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.CompanyBank.class.getName() + ".campaignPayments");
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountBank.class.getName());
+            createCache(cm, id.tech.cakra.ecfcoresvc.domain.AccountBank.class.getName() + ".campaignPayments");
             // jhipster-needle-ehcache-add-entry
         };
     }
