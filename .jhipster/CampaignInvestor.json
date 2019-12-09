@@ -1,0 +1,76 @@
+{
+    "name": "CampaignInvestor",
+    "fields": [
+        {
+            "fieldName": "qtyOnHand",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "qtyDeposit",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "qtyWithdraw",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "castValue",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "profitLoss",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "createSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lastModificationSystemDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastModificationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastModificationUserId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "campaign",
+            "otherEntityRelationshipName": "campaignInvestor",
+            "relationshipName": "campaign",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "accountMember",
+            "otherEntityRelationshipName": "campaignInvestor",
+            "relationshipName": "accountMember",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191209042046",
+    "entityTableName": "campaign_investor",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "ecfcoresvc",
+    "applications": "*",
+    "microserviceName": "ecfcoresvc"
+}
